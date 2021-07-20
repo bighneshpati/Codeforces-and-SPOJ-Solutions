@@ -15,7 +15,7 @@ int32_t main()
    for(int i=0;i<n;i++){
        cin>>arr[i];
    }
-    vector<int> cnt(200500,0);
+    vector<int> cnt(200500,0);   
    while(q--){
        int l,r;
        cin>>l>>r;
