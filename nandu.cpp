@@ -10,16 +10,8 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   map<int,int> umap;
-   umap[69] = 96;
-   umap[34] = 36;
-   umap[2] = 3;
-   umap[78] = 87;
-   umap[37] = 100;
-   for(auto i: umap){
-      cout<<i.first<<"->"<<i.second<<endl;
-   }
-   if(umap.find(2)!=umap.end())
-      cout<<"Value found";
+   vector<int> arr = {1,41,21,54,41,21,1};
+   // 1,42,63,117,158,179,180
+   // prefix_sum[r] - prefix_sum[l-1];
    return 0;
 }
