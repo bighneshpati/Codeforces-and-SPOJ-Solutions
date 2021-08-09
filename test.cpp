@@ -10,8 +10,7 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   int x;
-   cin>>x;
-   cout<<x;
+   int x = LLONG_MAX;
+   cout<<x<<endl;
    return 0;
 }
