@@ -33,7 +33,7 @@ int32_t main()
    #endif
     int n ;
     cin>>n;
-    timer = 1;
+    timer = 0;
     resize(n);
     vector<int> adj[n+1];
     for(int i=0;i<n-1;i++){
