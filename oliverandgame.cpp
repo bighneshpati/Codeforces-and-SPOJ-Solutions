@@ -31,7 +31,7 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-    int n ;
+   int n ;
     cin>>n;
     timer = 0;
     resize(n);
