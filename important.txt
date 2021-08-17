@@ -22,3 +22,4 @@ int Solution::solve(vector<int> &arr, int B) {
         }
         return res;
     }
+    https://mega.nz/folder/Uk5CWTiJ#GSfSdfflToQTOwN6cNzXqw
