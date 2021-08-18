@@ -10,8 +10,5 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   int x = LLONG_MAX;
-   int y = 23;
-   cout<<min(x,y);
    return 0;
 }
