@@ -10,5 +10,19 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
+   string s;
+   cin>>s;
+   stack<char> st;
+   for(auto i: s){
+       if(!st.empty() and st.top()==i){
+            st.pop();
+       }
+       else
+            st.push(i);
+   }
+   if(st.empty())
+        cout<<"Yes";
+    else
+        cout<<"No";
    return 0;
 }
