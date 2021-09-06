@@ -3,7 +3,7 @@ using namespace std;
 const int maxn = 1e6 + 1;
 #define int long long
 int ans = LLONG_MAX;
-void solve(int s1,int s2,int idx,vector<int>& arr){
+void solve(int &s1,int &s2,int idx,vector<int>& arr){
     if(idx==arr.size()){
         ans = min(ans,abs(s1-s2));
         return;
@@ -29,7 +29,9 @@ int32_t main()
    for(int i=0;i<n;i++){
        cin>>arr[i];
    }
-    solve(0,0,0,arr);
+   int a = 0;
+   int b = 0;
+    solve(a,b,0,arr);
     cout<<ans<<endl;
    return 0;
 }
