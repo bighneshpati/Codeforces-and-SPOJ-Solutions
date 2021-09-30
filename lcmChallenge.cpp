@@ -47,21 +47,12 @@ void c_p_c()
     }
 
     else while(maxm%minm!=0)
-
     {
-
         int temp=maxm;
-
         maxm=minm;
-
         minm=temp%minm;
-
     }
-
     return minm;
-
-    
-
 }
 
 //function to get lcm
@@ -71,9 +62,6 @@ int lcm(int a[], int n)
 {
 
     int l=a[0]*a[1]/gcd(a[0],a[1]);
-
-
-
      l=l*a[2]/gcd(l,a[2]);   
 
     return l;
