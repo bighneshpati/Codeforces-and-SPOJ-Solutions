@@ -1,15 +1,13 @@
 #include "bits/stdc++.h"
 using namespace std;
 const int maxn = 1e6 + 1;
-#define int long long
-int32_t main()
-{
-   ios::sync_with_stdio(false);
+int main(){ 
+    ios::sync_with_stdio(false);
    cin.tie(0);
    #ifndef ONLINE_JUDGE
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   cout<< ((-6 % 5) + 5)%5<<endl;
+   printf("%d", printf("%d", printf("%d", printf("%s", "Welcome to geeksforgeeks")))); return (0);
    return 0;
-}
+   }

@@ -10,6 +10,20 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   cout<< ((-6 % 5) + 5)%5<<endl;
+   int t;
+   cin>>t;
+   while(t--){
+       int n;
+       cin>>n;
+       if(n>=1 and n<100){
+           cout<<"Easy"<<endl;
+       }
+       else if(n>=100 and n<200){
+           cout<<"Medium"<<endl;
+       }
+       else{
+           cout<<"Hard"<<endl;
+       }
+   }
    return 0;
 }

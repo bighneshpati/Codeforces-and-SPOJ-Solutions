@@ -10,6 +10,20 @@ int32_t main()
    freopen("input.txt", "r", stdin);
    freopen("output.txt", "w", stdout);
    #endif
-   cout<< ((-6 % 5) + 5)%5<<endl;
+   int t;
+   cin>>t;
+   while(t--){
+       int a,b;
+       cin>>a>>b;
+       if(a>0 and b>0){
+           cout<<"Solution"<<endl;
+       }
+       else if(a==0){
+           cout<<"Liquid"<<endl;
+       }
+       else{
+           cout<<"Solid"<<endl;
+       }
+   }
    return 0;
 }

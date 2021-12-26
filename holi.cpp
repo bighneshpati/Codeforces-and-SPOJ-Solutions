@@ -1,21 +1,20 @@
 #include "bits/stdc++.h"
 using namespace std;
-const int maxn = 1e6 + 1;
+const int maxn = 1e5 + 5;
 #define int long long
-int dfs(int node,vector<pair<int,int>> adj[],vector<bool> &visited,vector<int> &count,int &ans,int &n){
-   visited[node] = true;
-   count[node] = 1;
-   for(auto nbr_pair : adj[node]){
-      int nbr = nbr_pair.first;
-      int cost = nbr_pair.second;
-      if(!visited[nbr]){
-         count[node] += dfs(nbr,adj,visited,count,ans,n);
-         int nx = count[nbr];
-         int ny = n-nx;
-         ans += 2*min(nx,ny)*cost;
+int dfs(vector<pair<int,int>> adj[],int n,int &ans,int currNode,int parentNode){
+   int totalCurrentNode = 1;
+   for(auto u: adj[currNode]){
+      int nextNode = u.first;
+      int weight = u.second;
+      if(nextNode==parentNode){
+         continue;
       }
+      int childNode = dfs(adj,n,ans,nextNode,currNode);
+      ans += 2*min(childNode,n-childNode)*weight;
+      totalCurrentNode += childNode;
    }
-   return count[node];
+   return totalCurrentNode;
 }
 int32_t main()
 {
@@ -27,21 +26,19 @@ int32_t main()
    #endif
    int t;
    cin>>t;
-   for(int p=1;p<=t;p++){
+   for(int i=1;i<=t;i++){
+      vector<pair<int,int>> adj[maxn];
+      int ans = 0;
       int n;
       cin>>n;
-      vector<pair<int,int>> adj[n+1];
-      for(int i=1;i<=n-1;i++){
-         int x,y,cost;
-         cin>>x>>y>>cost;
-         adj[x].push_back({y,cost});
-         adj[y].push_back({x,cost});
+      for(int j=0;j<n-1;j++){
+         int u,v,w;
+         cin>>u>>v>>w;
+         adj[u].push_back({v,w});
+         adj[v].push_back({u,w});
       }
-      vector<bool> visited(n+1,false);
-      vector<int> count(n+1,0);
-      int ans = 0;
-      dfs(1,adj,visited,count,ans,n);
-      cout<<"Case #"<<p<<" :"<<ans<<endl;
+      dfs(adj,n,ans,1,-1);
+      cout<<"Case #"<<i<<": "<<ans<<endl;
    }
    return 0;
 }
