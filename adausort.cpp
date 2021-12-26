@@ -8,7 +8,7 @@ int index,value;
 
 ele arr[100007];
 
-//comparator to perform unstable sort cool
+//comparator to perform unstable sort cool bruh
 bool comp(ele a,ele b)
 {
     if(a.value!=b.value)
